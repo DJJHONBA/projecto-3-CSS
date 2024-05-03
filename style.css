@@ -130,3 +130,70 @@
         justify-self: flex-start;
         align-self: center;
    }
+
+   .caja-distribucion {
+    display: flex;
+    /* Ajusta el espacio entre los elementos*/
+    /*justify-content: space-between;*/
+    /* ajusta el mismo espacio alrededor de cada elemento */
+    justify-content: space-around;
+    flex-direction: row;
+
+   }
+
+   .caja-distribucion div {
+    height: 50px;
+    width: 50px;
+    border: 1px solid red;
+    color: aqua;
+   }
+
+   .boton-animado {
+    padding: 10px;
+    border: none;
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 
+    padding 2s,
+    background-color 2s,
+    color 2s;
+    font-size: 2s;
+   }
+
+   /* Pseudo-clases*/
+   .boton-animado:hover {
+    padding: 50px;
+     background-color: red;
+     color: yellow;
+     font-size: 30px;
+   }
+
+   .caja-animada {
+    position: relative;
+    left: 0px;
+    margin-top: 20px;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(0, 0, 0);
+    animation: mover-derecha 4s infinite alternate;
+   }
+
+   /* keyframes */
+   
+   @keyframes mover-derecha {
+        0% {
+            top: 0px;
+            left: 0px;
+            background-color: aqua;
+        }
+        50% {
+            top: 50px;
+        }
+        100% {
+            top: 0;
+            left: 200px;
+            background-color: blueviolet;
+        }
+   }
