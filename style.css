@@ -98,14 +98,13 @@
    }
 
    .posicion-caja-2 {
-        position: absolute;
+    position: relative;
+    
         border-color: blueviolet;
-        bottom: 0;
-        right: 0;
    }
 
    .posicion-caja-3 {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
    }
@@ -164,7 +163,7 @@
 
    /* Pseudo-clases*/
    .boton-animado:hover {
-    padding: 50px;
+    padding: 5px;
      background-color: red;
      color: yellow;
      font-size: 30px;
@@ -186,7 +185,7 @@
         0% {
             top: 0px;
             left: 0px;
-            background-color: aqua;
+            background-color: rgb(255, 213, 0);
         }
         50% {
             top: 50px;
@@ -194,6 +193,55 @@
         100% {
             top: 0;
             left: 200px;
-            background-color: blueviolet;
+            background-color: rgb(0, 0, 0);
         }
    }
+
+   /*
+   Las etiquetas inline por defecto son:
+   - button
+   - input
+   - img
+   - span
+    */
+    .transformacion {
+        display: block;
+        margin: auto;
+        transition: transform 1s;
+    }
+
+   .transformacion:hover {
+    transform: scale(1.2);
+     }
+
+     .titulo-animado {
+        text-align: center;
+        animation: aparecer 2s linear forwards;
+     }
+     
+     @keyframes  aparecer {
+        from {
+            transform: translate(-1000px, 0px);
+        }
+
+        to {
+            transform: translate(0px, 0px);
+        }
+     }
+     
+     .Responsive {
+        font-size: 150px;
+     }
+
+     @media screen and (width < 800px) {
+        .Responsive {
+            font-size: 120px;
+        }
+     }
+     
+     @media screen and (width < 640px) {
+        .Responsive {
+            font-size: 100px;
+        }
+        
+     }
